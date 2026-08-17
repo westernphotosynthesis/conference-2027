@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venue - Western Photosynthesis Conference 2027</title>
+
+    <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #24292e;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 1rem 0 0.5rem 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #007acc, #00996e);
+        }
+
+        .nav ul li {
+            margin: 0 1rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer .footer-logo {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .footer-logo img {
+            max-width: 60px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .main-content h2 {
+            text-align: center;
+            margin-top: 1;
+            margin-bottom: 0;
+            font-size: 1.75rem;
+        }
+
+        .page-header {
+            background: linear-gradient(90deg, #007acc, #00996e);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+            mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            padding: 2rem 1rem 6rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3.25rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .main-content {
+            margin-top: 0.5rem;
+            margin-right: 5rem;
+            margin-bottom: 0.5rem;
+            margin-left: 5rem;
+            padding: 0.5rem;
+        }
+
+        .main-content h1,
+        .main-content h2 {
+            text-align: center;
+            margin-top: 1;
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
+        }
+
+        a {
+            color: #00996e;
+            text-decoration: underline;
+        }
+
+        .venue-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .venue-text {
+            flex: 1 1 50%;
+            min-width: 280px;
+        }
+
+        .venue-carousel {
+            flex: 1 1 45%;
+            min-width: 280px;
+            position: relative;
+        }
+
+        .carousel {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .venue-flip-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+
+        .venue-flip-left {
+            flex: 1 1 45%;
+            min-width: 280px;
+        }
+
+        .venue-flip-text {
+            flex: 1 1 50%;
+            min-width: 280px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel button.prev {
+            left: 10px;
+        }
+
+        .carousel button.next {
+            right: 10px;
+        }
+
+        .venue-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .venue-gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 2px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .venue-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 0.5rem 1rem;
+                padding: 0.5rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                background: none;
+                border: 0;
+                color: #ffffff;
+                font-size: 1.75rem;
+                line-height: 1;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: linear-gradient(90deg, #007acc, #00996e);
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                margin: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+                width: 100%;
+            }
+
+            .nav ul.show {
+                max-height: 600px;
+            }
+
+            .nav ul li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .nav ul li:first-child {
+                border-top: 0;
+            }
+
+            .nav ul li a {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+                display: block;
+            }
+
+            .venue-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .venue-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            .venue-gallery img {
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <button class="hamburger" aria-label="Open menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="conduct.html">Code of Conduct</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Western Photosynthesis Conference 2027</h1>
+        <p>January 7–10, 2027 • Los Gatos, CA</p>
+    </header>
+
+    <main class="main-content">
+        <h2>Venue and Travel Information</h2>
+        <div class="venue-section">
+            <div class="venue-text">
+                <p>This year's conference will be held at <a style="color: #00996e;" target="_blank"
+                        href="https://www.greenmountainretreat.com/">Green Mountain Retreat</a>, a venue surrounded by
+                    the natural redwood and oak woodlands
+                    of Los Gatos with easy access to downtown San Jose.</p>
+                <p>There are three international airports in the Bay Area that you can plan to fly to or from: San
+                    Francisco International Airport (SFO), Oakland International Airport (OAK), and San Jose
+                    International Airport (SJC).<strong style="color: #007acc;"> A van shuttle can be provided
+                        for transport between SJC/SFO/OAK and Green Mountain Retreat. Please contact the organizers if
+                        you are
+                        interested.</strong></p>
+                <p>To get to the venue from any one of these airports, simply navigate to “Green Mountain
+                    Retreat” in Google Maps. If the GPS navigates to a County Park, continue driving up Bear Creek Road
+                    for
+                    3 minutes to reach the venue entrance.</p>
+            </div>
+
+            <div class="venue-carousel">
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="images/gmr-2.jpg" alt="Venue view 2">
+                        <img src="images/gmr-3.jpg" alt="Venue view 3">
+                        <img src="images/gmr-4.JPG" alt="Venue view 4">
+                        <img src="images/gmr-5.JPG" alt="Venue view 5">
+                        <img src="images/gmr-6.JPG" alt="Venue view 6">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="venue-gallery">
+            <a href="https://www.greenmountainretreat.com/retreats" target="_blank">
+                <img src="images/gmr-7.avif" alt="GMR lecture hall">
+            </a>
+            <a href="https://www.greenmountainretreat.com/lodging" target="_blank">
+                <img src="images/gmr-8.jpg" alt="GMR dorm common area">
+            </a>
+            <a href="https://www.greenmountainretreat.com/lodging" target="_blank">
+                <img src="images/gmr-9.avif" alt="GMR dorm">
+            </a>
+            <a href="https://www.greenmountainretreat.com/lodging" target="_blank">
+                <img src="images/gmr-10.jpg" alt="GMR cottage">
+            </a>
+            <a href="https://www.greenmountainretreat.com/food" target="_blank">
+                <img src="images/gmr-11.jpg" alt="GMR food 1">
+            </a>
+            <a href="https://www.greenmountainretreat.com/food" target="_blank">
+                <img src="images/gmr-12.jpg" alt="GMR food 2">
+            </a>
+        </div>
+
+        <div class="venue-flip-section">
+            <div class="venue-flip-left">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps?q=Green+Mountain+Retreat,+Los+Gatos,+CA&output=embed"
+                        loading="lazy" allowfullscreen style="width:100%; height:100%; min-height:300px; border:0;">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="venue-flip-text">
+                <p>Green Mountain Retreat also has a number of on-site activities to enjoy, including bocce ball,
+                    archery,
+                    giant chess, ping pong, pickleball, badminton, Connect 4, cornhole, and basketball.</p>
+                <p>A virtual tour of the venue is available at the bottom of <a style="color: #00996e;" target="_blank"
+                        href="https://www.greenmountainretreat.com/">this page</a> for your reference.</p>
+                <p><strong>Note: </strong>The weather during the conference will likely range anywhere from 35–56 °F.
+                    Check weather trends and predictions for Los Gatos <a style="color: #00996e;" target="_blank"
+                        href="https://www.weathertab.com/en/c/01/united-states/california/los-gatos/">here</a>!</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/wpc-new-favicon.png" alt="WPC Logo">
+        </div>
+        <p>&copy; Western Photosynthesis Conference 2026</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        let index = 0;
+
+        function showSlide(newIndex) {
+            index = (newIndex + images.length) % images.length;
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        document.querySelector('.next').addEventListener('click', () => {
+            showSlide(index + 1);
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            showSlide(index - 1);
+        });
+
+        setInterval(() => {
+            showSlide(index + 1);
+        }, 4000); //scrolls every 4 sec
+    </script>
+
+    <script>
+        const btn = document.querySelector('.hamburger');
+        const menu = document.querySelector('.nav ul');
+        btn.addEventListener('click', () => menu.classList.toggle('show'));
+    </script>
+
+</body>
+
+</html>

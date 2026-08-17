@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Western Photosynthesis Conference 2026</title>
+
+    <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #24292e;
+        }
+
+        /* Navbar */
+        .nav ul {
+            list-style: none;
+            padding: 1rem 0 0.5rem 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #007acc, #00996e);
+        }
+
+        .nav ul li {
+            margin: 0 1rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer .footer-logo {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .footer-logo img {
+            max-width: 60px;
+            /* small size */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* centers it */
+        }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(90deg, #007acc, #00996e);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+            mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            padding: 2rem 1rem 6rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3.25rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+            /* 90% opacity */
+        }
+
+        .main-content {
+            margin-top: 0.5rem;
+            margin-right: 5rem;
+            margin-bottom: 0.5rem;
+            margin-left: 5rem;
+            padding: 0.5rem;
+        }
+
+        .main-content h1,
+        .main-content h2 {
+            text-align: center;
+            margin-top: 1;
+            margin-bottom: 0;
+            font-size: 1.75rem;
+        }
+
+        .main-content p {
+            margin: 0.5rem 0 1rem 0;
+            font-size: 1rem;
+            color: #35383D;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+
+            /* Shrink margins for body text */
+            .main-content {
+                margin: 0.5rem 1rem;
+                padding: 0.5rem;
+            }
+
+            /* Scale down header text */
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            /* Hamburger button (only on mobile) */
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                background: none;
+                border: 0;
+                color: #ffffff;
+                font-size: 1.75rem;
+                line-height: 1;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav {
+                position: sticky;
+                /* makes it float at top */
+                top: 0;
+                z-index: 1000;
+                background: linear-gradient(90deg, #007acc, #00996e);
+                /* solid background when scrolling */
+            }
+
+            /* Navbar collapses; expands when .show is added to .nav ul */
+            .nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                margin: 0;
+                max-height: 0;
+                /* collapsed by default */
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+                width: 100%;
+            }
+
+            .nav ul.show {
+                max-height: 600px;
+                /* expanded */
+            }
+
+            .nav ul li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .nav ul li:first-child {
+                border-top: 0;
+            }
+
+            .nav ul li a {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="nav">
+        <button class="hamburger" aria-label="Open menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="conduct.html">Code of Conduct</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Western Photosynthesis Conference 2027</h1>
+        <p>January 7–10, 2027 • Los Gatos, CA</p>
+    </header>
+    <!-- Main content will go here -->
+    <main class="main-content">
+        <h2>Coming soon!</h2>
+        <!-- Add page-specific content here -->
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/wpc-new-favicon.png" alt="WPC Logo">
+        </div>
+        <p>&copy; Western Photosynthesis Conference 2027</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.hamburger');
+        const menu = document.querySelector('.nav ul');
+        btn.addEventListener('click', () => menu.classList.toggle('show'));
+    </script>
+</body>
+
+</html>

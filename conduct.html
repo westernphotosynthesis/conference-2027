@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code of Conduct - Western Photosynthesis Conference 2027</title>
+
+    <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #24292e;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 1rem 0 0.5rem 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #007acc, #00996e);
+        }
+
+        .nav ul li {
+            margin: 0 1rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer .footer-logo {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .footer-logo img {
+            max-width: 60px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            background: linear-gradient(90deg, #007acc, #00996e);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+            mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            padding: 2rem 1rem 6rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3.25rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .main-content {
+            margin-top: 0.5rem;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+            padding: 0rem;
+        }
+
+        .main-content h1,
+        .main-content h2 {
+            text-align: center;
+            margin-top: 1;
+            margin-bottom: 0;
+            font-size: 1.75rem;
+        }
+
+        .main-content p {
+            margin: 0.5rem 0 1rem 0;
+            font-size: 1rem;
+            color: #35383D;
+        }
+
+        .conduct-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+            color: #24292e;
+        }
+
+        .conduct-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .conduct-section h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: #007acc;
+        }
+
+        .conduct-section ul {
+            margin: 0.5rem 0 1.5rem 1.5rem;
+            padding: 0;
+        }
+
+        .conduct-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .conduct-section .inline-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem 2rem;
+        }
+
+        .conduct-section .inline-list li {
+            white-space: nowrap;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 0.5rem 1rem;
+                padding: 0.5rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                background: none;
+                border: 0;
+                color: #ffffff;
+                font-size: 1.75rem;
+                line-height: 1;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: linear-gradient(90deg, #007acc, #00996e);
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                margin: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+                width: 100%;
+            }
+
+            .nav ul.show {
+                max-height: 600px;
+            }
+
+            .nav ul li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .nav ul li:first-child {
+                border-top: 0;
+            }
+
+            .nav ul li a {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <button class="hamburger" aria-label="Open menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="conduct.html">Code of Conduct</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Western Photosynthesis Conference 2027</h1>
+        <p>January 7–10, 2027 • Los Gatos, CA</p>
+    </header>
+
+    <main class="main-content">
+        <div class="conduct-section">
+            <h2>Code of Conduct</h2>
+
+            <p>
+                The 36th Western Photosynthesis Conference (WPC 2027), North American Photosynthesis Conference
+                Association
+                (NAPCA), and
+                the International Society of Photosynthetic Research (ISPR) are committed to fostering a diverse and
+                inclusive
+                environment. We believe that all event participants deserve to be treated with respect, dignity, and
+                kindness.
+            </p>
+
+            <h3>Protected Categories</h3>
+            <p>The WPC 2027 organizers will not tolerate any form of discrimination, including but not limited to:</p>
+            <ul class="inline-list">
+                <li>Age</li>
+                <li>Cultural background</li>
+                <li>Ethnicity</li>
+                <li>Gender identity or expression</li>
+                <li>National origin</li>
+                <li>Physical or mental difference</li>
+                <li>Political affiliation</li>
+                <li>Pregnancy or parental role</li>
+                <li>Race</li>
+                <li>Religion</li>
+                <li>Sexual orientation</li>
+                <li>Socio-economic circumstance</li>
+            </ul>
+
+            <h3>Expectations</h3>
+            <ul>
+                <li>Treat everyone with respect, dignity, and equity</li>
+                <li>Uphold the highest standards of scientific integrity and professional behavior</li>
+                <li>Respect the rules, property, and policies of the event venue</li>
+                <li>Adhere to federal and local laws during the WPC 2027 conference, field trips, and other events</li>
+            </ul>
+
+            <h3>Unacceptable Behavior</h3>
+            <ul>
+                <li>Harassment or discrimination in any form (see definitions below)</li>
+                <li>Physical or verbal abuse</li>
+                <li>Personal attacks directed toward others</li>
+                <li>Disruption of oral or poster sessions, including demeaning or hostile questioning</li>
+                <li>Presentations that promote illegal behavior, scientific misconduct, or offensive/discriminatory
+                    subject
+                    matter</li>
+            </ul>
+
+            <h3>Definitions</h3>
+            <p><strong>Harassment</strong> is improper conduct by an individual that is offensive to others and that the
+                individual knew, or ought reasonably to have known, would cause offense or harm. It may be based on
+                race,
+                national or ethnic origin, color, language, religion, age, sex, sexual orientation, gender identity or
+                expression, marital status, family status, disability, or pardoned conviction. It includes objectionable
+                acts,
+                comments, or displays that demean or humiliate, as well as intimidation or threats. Persistent behavior
+                is
+                typical, but even a single severe incident may constitute harassment.</p>
+
+            <p><strong>Discrimination</strong> is treating people differently, negatively, or adversely based on any of
+                the
+                protected categories above.</p>
+
+            <h3>Reporting</h3>
+            <p>
+                If an individual experiences or witnesses unacceptable behavior, they should inform one/all of the host
+                organizers
+                in person, by email, or by phone (provided they feel safe and comfortable doing so). The organizers'
+                information will be provided in the PDF version of conference program.
+            </p>
+
+            <h3>Procedures</h3>
+            <ul>
+                <li>Document the details of an incident as soon as possible, especially if immediate reporting is not
+                    possible.
+                </li>
+                <li>Anyone witnessing a dangerous situation, someone in distress, or any other immediate threat should
+                    report to
+                    event security or local police, and then notify a host organizer.</li>
+                <li>All complaints will be treated seriously and responded to promptly. Confidentiality will be
+                    maintained
+                    whenever possible within the limits of the law.</li>
+            </ul>
+
+            <h3>Enforcement and Compliance</h3>
+            <p>WPC 2027 is responsible for upholding this code of conduct and may take any action deemed necessary,
+                including:</p>
+            <ul>
+                <li>Requesting that an individual cease unacceptable behavior</li>
+                <li>Removing an individual from an event without refund</li>
+                <li>Prohibiting future participation in NAPCA/ISPR conferences or events</li>
+                <li>Contacting law enforcement if necessary</li>
+            </ul>
+            <p>Anyone asked to stop unacceptable behavior is expected to comply immediately.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/wpc-new-favicon.png" alt="WPC Logo">
+        </div>
+        <p>&copy; Western Photosynthesis Conference 2027</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.hamburger');
+        const menu = document.querySelector('.nav ul');
+        btn.addEventListener('click', () => menu.classList.toggle('show'));
+    </script>
+
+</body>
+
+</html>
