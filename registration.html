@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Western Photosynthesis Conference 2026</title>
+    <title>Register - Western Photosynthesis Conference 2027</title>
 
     <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* Base Styles */
         body {
             margin: 0;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,7 +23,6 @@
             color: #24292e;
         }
 
-        /* Navbar */
         .nav ul {
             list-style: none;
             padding: 1rem 0 0.5rem 0;
@@ -34,6 +30,7 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(90deg, #007acc, #00996e);
+            align-items: baseline;
         }
 
         .nav ul li {
@@ -66,14 +63,11 @@
 
         footer .footer-logo img {
             max-width: 60px;
-            /* small size */
             height: auto;
             display: block;
             margin: 0 auto;
-            /* centers it */
         }
 
-        /* Header */
         .page-header {
             background: linear-gradient(90deg, #007acc, #00996e);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
@@ -97,14 +91,13 @@
             font-size: 1.25rem;
             margin: 0;
             color: rgba(255, 255, 255, 0.9);
-            /* 90% opacity */
         }
 
         .main-content {
             margin-top: 0.5rem;
-            margin-right: 5rem;
+            margin-right: 20rem;
             margin-bottom: 0.5rem;
-            margin-left: 5rem;
+            margin-left: 20rem;
             padding: 0.5rem;
         }
 
@@ -122,20 +115,267 @@
             color: #35383D;
         }
 
+        .important-dates {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem auto;
+            max-width: 800px;
+        }
+
+        .important-dates li {
+            display: grid;
+            grid-template-columns: 200px auto;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .important-dates .date {
+            text-align: right;
+            font-weight: 700;
+            color: #007acc;
+        }
+
+        .important-dates .desc {
+            color: #35383D;
+            margin-left: 2rem;
+        }
+
+        .program-schedule {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .program-day {
+            border-radius: 16px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(360deg, rgba(0, 153, 110, 0.35), rgba(0, 153, 110, 0.35));
+            backdrop-filter: blur(18px) saturate(200%);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-day h3 {
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: #007acc;
+            margin: 0 0 0.5rem;
+            text-align: center;
+        }
+
+        .program-day ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .program-day li {
+            display: grid;
+            column-gap: 0.75rem;
+            margin: 0.25rem 0;
+        }
+
+        .program-day li strong {
+            font-weight: 600;
+            color: #333;
+            text-align: left;
+        }
+
+        .date-link {
+            text-decoration: none;
+            display: inline-block;
+            margin: 2rem auto;
+        }
+
+        .date-box {
+            flex: 1 1 250px;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            padding: 1.5rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .date-box h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .date-box p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .date-box strong {
+            font-size: 1.1rem;
+        }
+
+        .date-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .important-dates .date-link {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .important-dates .date-box {
+            margin: 0 auto;
+        }
+
+        .fee-table-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .fee-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .fee-table thead tr {
+            background: linear-gradient(90deg, #007acc, #00996e);
+        }
+
+        .fee-table th {
+            color: #fff;
+            padding: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .fee-table td {
+            padding: 0.85rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .fee-table .category-header {
+            background-color: #e8f6f2;
+            font-weight: 700;
+            color: #007a64;
+            text-align: left;
+        }
+
+        .fee-table .category-header td {
+            border-top: 2px solid #cfe7e3;
+            border-bottom: 2px solid #cfe7e3;
+            padding: 1rem;
+        }
+
+        .fee-table td:nth-child(2) {
+            text-align: left;
+            padding-left: 0.85rem;
+        }
+
+        .fee-table .category-header td {
+            border-top: 2px solid #cfe7e3;
+            border-bottom: 2px solid #cfe7e3;
+            padding: 0.75rem 1rem;
+        }
+
+        .category-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .registration-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.9rem;
+            background: #007acc;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .registration-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .category-header-content {
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .registration-button {
+                padding: 0.4rem 0.65rem;
+                font-size: 0.7rem;
+            }
+        }
+
         .hamburger {
             display: none;
         }
 
-        /* Mobile adjustments */
         @media (max-width: 768px) {
 
-            /* Shrink margins for body text */
+            body,
+            p,
+            li {
+                text-align: justify;
+            }
+
+            .date-box,
+            .date-box h3,
+            .date-box p {
+                text-align: center !important;
+            }
+
+            .fee-table-container {
+                justify-self: center;
+                justify-content: center;
+                overflow-x: auto;
+                padding: 0 1rem;
+            }
+
+            .fee-table {
+                width: 90%;
+                margin: 0 auto;
+                font-size: 0.7rem;
+            }
+
+            .fee-table th,
+            .fee-table td {
+                font-size: 0.7rem;
+                padding: 0.7rem;
+            }
+
             .main-content {
                 margin: 0.5rem 1rem;
                 padding: 0.5rem;
             }
 
-            /* Scale down header text */
             .page-header h1 {
                 font-size: 2rem;
             }
@@ -144,7 +384,6 @@
                 font-size: 1rem;
             }
 
-            /* Hamburger button (only on mobile) */
             .hamburger {
                 display: block;
                 cursor: pointer;
@@ -158,21 +397,17 @@
 
             .nav {
                 position: sticky;
-                /* makes it float at top */
                 top: 0;
                 z-index: 1000;
                 background: linear-gradient(90deg, #007acc, #00996e);
-                /* solid background when scrolling */
             }
 
-            /* Navbar collapses; expands when .show is added to .nav ul */
             .nav ul {
                 flex-direction: column;
                 align-items: stretch;
                 padding: 0;
                 margin: 0;
                 max-height: 0;
-                /* collapsed by default */
                 overflow: hidden;
                 transition: max-height 0.35s ease;
                 width: 100%;
@@ -180,7 +415,6 @@
 
             .nav ul.show {
                 max-height: 600px;
-                /* expanded */
             }
 
             .nav ul li {
@@ -197,36 +431,294 @@
                 padding: 0.75rem 1rem;
                 display: block;
             }
+
+            .important-dates li {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .important-dates .date {
+                text-align: left;
+                margin-bottom: 0.25rem;
+            }
+
+            .important-dates .desc {
+                margin-left: 0;
+            }
+
+            .program-day {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Navbar -->
     <nav class="nav">
         <button class="hamburger" aria-label="Open menu">☰</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="program.html">Program</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="eco.html"><sup style="color: #fea81e;">New </sup>ECO Program</a></li>
+            <li><a href="gallery.html">2026 Photo Gallery</a></li>
             <li><a href="conduct.html">Code of Conduct</a></li>
         </ul>
     </nav>
 
-    <!-- Page Header -->
     <header class="page-header">
         <h1>Western Photosynthesis Conference 2027</h1>
-        <p>January 7–10, 2027 • Los Gatos, CA</p>
+        <p style="text-align: center;">January 7–10, 2027 • Los Gatos, CA</p>
     </header>
-    <!-- Main content will go here -->
+
     <main class="main-content">
-        <h2>Coming soon!</h2>
-        <!-- Add page-specific content here -->
+        <h2 style="text-align: center;">Registration</h2>
+        <p style="text-align: center;"><strong>Registration costs will cover meals and lodging for all
+                attendees, unless specified below.</strong></p>
+        <p style="text-align: center;">Complete the registration form below.</p>
+        <div class="important-dates">
+            <a href="forms.html" target="_blank" class="date-link">
+                <div class="date-box">
+                    <h3 style="color: #007acc;">Early Registration</h3>
+                    <p>Submit by <br> <strong>November 6, 2026</strong></p>
+                </div>
+            </a>
+            <a href="#fees" class="date-link">
+                <div class="date-box" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+                    <h3 style="color: #00996e;">View Registration Fees</h3>
+                    <p>See rates for students, postdocs, PIs, and guests</p>
+                </div>
+            </a>
+        </div>
+        </div>
+
+        <h2 style="text-align: center;">Registration Awards</h2>
+        <p>All postdocs, graduate students, and undergraduate students are eligible to receive registration
+            awards that may cover up to two-thirds of the registration fee. To apply, please prepare (1) an abstract of
+            the presentation you intend to submit to the meeting (see Abstract Guidelines below for details), (2) a
+            paragraph explaining how attending the meeting will benefit your career, and (3) a letter of recommendation
+            from your primary advisor, including a statement on available funds. Please send your application materials as specified in the registration form by
+            <strong>November 6, 2026.</strong>
+        </p>
+        <p>If applying for a registration award, <strong>please do not register for the conference until you receive
+                notification of the award decision by November 20, 2026.</strong> If accepted, we will provide you with a
+            registration code and instructions on how to proceed with registration.</p>
+        <p><u>All applicants will receive a $50 discounted registration fee.</u></p>
+        <br>
+
+        <h2 style="text-align: center;">Abstract and Poster Guidelines</h2>
+        <p><strong style="color: #00996e;">Abstracts: </strong>Please submit a one-page abstract of your presentation in
+            PDF format (8.5 x 11 in. dimensions) with (1) the title of your poster/talk, (2) a complete author list, and
+            (3) author affiliations. Please note that the uploaded PDF will be used directly in our program booklet, so
+            accuracy is crucial.</p>
+        <p><strong>Feel free to be creative with all other aspects of the presentation of your abstract!</strong></p>
+        <p><strong style="color: #00996e;">Posters: </strong>Your poster should fit on a 36 x 48 in. poster board,
+            preferably in portrait-style orientation.</p>
+        <br>
+
+        <section id="fees">
+            <h2 style="text-align:center;">Registration Fees</h2>
+            <p style="text-align:center;">All registration fees include meals and lodging for the duration of the
+                conference. <br> View the lodging options <a href="https://www.greenmountainretreat.com/lodging"
+                    target="_blank" style="color: #00996e;"><b>here</b></a>.</p>
+
+            <div class="fee-table-container">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Registrant</th>
+                            <th></th>
+                            <th>Early Registration<br><span class="deadline">(by Nov 6, 2026)</span></th>
+                            <th>Regular Registration<br><span class="deadline">(after Nov 6, 2026)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>Undergraduate Student</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>Shared Dormitory</td>
+                            <td>$410</td>
+                            <td>$460</td>
+                        </tr>
+
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>Research Technician</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>Shared Dormitory</td>
+                            <td>$470</td>
+                            <td>$520</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Single Dormitory</td>
+                            <td>$620</td>
+                            <td>$670</td>
+                        </tr>
+
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>Graduate Student</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td>Shared Dormitory</td>
+                            <td>$470</td>
+                            <td>$520</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Single Dormitory</td>
+                            <td>$620</td>
+                            <td>$670</td>
+                        </tr>
+
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>Postdoc</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>Shared Dormitory</td>
+                            <td>$520</td>
+                            <td>$570</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Single Dormitory</td>
+                            <td>$700</td>
+                            <td>$750</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Shared Cottage</td>
+                            <td>$810</td>
+                            <td>$860</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Off-site</td>
+                            <td>$380</td>
+                            <td>$380</td>
+                        </tr>
+
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>PI</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>Single Dormitory</td>
+                            <td>$850</td>
+                            <td>$900</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Single Cottage</td>
+                            <td>$1140</td>
+                            <td>$1190</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Shared Cottage</td>
+                            <td>$980</td>
+                            <td>$1,030</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Off-site</td>
+                            <td>$440</td>
+                            <td>$440</td>
+                        </tr>
+
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>Industry Professional</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>On-site Meals Only</td>
+                            <td>$500</td>
+                            <td>$500</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Shared Cottage</td>
+                            <td>$1230</td>
+                            <td>$1230</td>
+                        </tr>
+
+                        <tr class="category-header">
+                            <td colspan="4">
+                                <div class="category-header-content">
+                                    <span>Guest</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Shared Cottage</td>
+                            <td>$400</td>
+                            <td>$400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <h2>Important Dates:</h2>
+        <ul class="important-dates">
+            <li>
+                <span class="date">November 6, 2026</span>
+                <span class="desc">Early registration with a discounted rate</span>
+            </li>
+            <li>
+                <span class="date">November 25, 2026</span>
+                <span class="desc">Abstract submission to be considered for talk presentation</span>
+            </li>
+            <li>
+                <span class="date">December 18, 2026</span>
+                <span class="desc">General registration and abstract submission for poster presentation</span>
+            </li>
+        </ul>
     </main>
 
     <footer>

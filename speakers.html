@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Western Photosynthesis Conference 2026</title>
+    <title>Speakers - Western Photosynthesis Conference 2027</title>
 
     <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* Base Styles */
         body {
             margin: 0;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,7 +23,6 @@
             color: #24292e;
         }
 
-        /* Navbar */
         .nav ul {
             list-style: none;
             padding: 1rem 0 0.5rem 0;
@@ -34,6 +30,7 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(90deg, #007acc, #00996e);
+            align-items: baseline;
         }
 
         .nav ul li {
@@ -66,14 +63,11 @@
 
         footer .footer-logo img {
             max-width: 60px;
-            /* small size */
             height: auto;
             display: block;
             margin: 0 auto;
-            /* centers it */
         }
 
-        /* Header */
         .page-header {
             background: linear-gradient(90deg, #007acc, #00996e);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
@@ -97,45 +91,66 @@
             font-size: 1.25rem;
             margin: 0;
             color: rgba(255, 255, 255, 0.9);
-            /* 90% opacity */
         }
 
         .main-content {
-            margin-top: 0.5rem;
-            margin-right: 5rem;
-            margin-bottom: 0.5rem;
-            margin-left: 5rem;
-            padding: 0.5rem;
+            margin: 2rem 5rem;
         }
 
-        .main-content h1,
         .main-content h2 {
             text-align: center;
-            margin-top: 1;
-            margin-bottom: 0;
-            font-size: 1.75rem;
+            margin-bottom: 2rem;
         }
 
-        .main-content p {
-            margin: 0.5rem 0 1rem 0;
+        .speakers-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .speaker-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .speaker-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .speaker-info h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: #007acc;
+        }
+
+        .speaker-info h4 {
+            margin: 0 0 0.2rem 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #35383d;
+        }
+
+        .speaker-info p {
+            margin: 0.8rem 0 0.5rem 0;
             font-size: 1rem;
-            color: #35383D;
+            color: #24292e;
         }
 
         .hamburger {
             display: none;
         }
 
-        /* Mobile adjustments */
         @media (max-width: 768px) {
-
-            /* Shrink margins for body text */
             .main-content {
                 margin: 0.5rem 1rem;
                 padding: 0.5rem;
             }
 
-            /* Scale down header text */
             .page-header h1 {
                 font-size: 2rem;
             }
@@ -144,7 +159,6 @@
                 font-size: 1rem;
             }
 
-            /* Hamburger button (only on mobile) */
             .hamburger {
                 display: block;
                 cursor: pointer;
@@ -158,21 +172,17 @@
 
             .nav {
                 position: sticky;
-                /* makes it float at top */
                 top: 0;
                 z-index: 1000;
                 background: linear-gradient(90deg, #007acc, #00996e);
-                /* solid background when scrolling */
             }
 
-            /* Navbar collapses; expands when .show is added to .nav ul */
             .nav ul {
                 flex-direction: column;
                 align-items: stretch;
                 padding: 0;
                 margin: 0;
                 max-height: 0;
-                /* collapsed by default */
                 overflow: hidden;
                 transition: max-height 0.35s ease;
                 width: 100%;
@@ -180,7 +190,6 @@
 
             .nav ul.show {
                 max-height: 600px;
-                /* expanded */
             }
 
             .nav ul li {
@@ -197,36 +206,134 @@
                 padding: 0.75rem 1rem;
                 display: block;
             }
+
+            .main-content {
+                margin: 1rem;
+            }
+
+            .speaker-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .speaker-card img {
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Navbar -->
     <nav class="nav">
         <button class="hamburger" aria-label="Open menu">☰</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="program.html">Program</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="eco.html"><sup style="color: #fea81e;">New </sup>ECO Program</a></li>
+            <li><a href="gallery.html">2026 Photo Gallery</a></li>
             <li><a href="conduct.html">Code of Conduct</a></li>
         </ul>
     </nav>
 
-    <!-- Page Header -->
     <header class="page-header">
         <h1>Western Photosynthesis Conference 2027</h1>
         <p>January 7–10, 2027 • Los Gatos, CA</p>
     </header>
-    <!-- Main content will go here -->
+
     <main class="main-content">
-        <h2>Coming soon!</h2>
-        <!-- Add page-specific content here -->
+        <h2>Invited Speakers</h2>
+
+        <div class="speakers-container">
+            <div class="speaker-card">
+                <img src="images/gray.png" alt="Eric Arsenault">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Eric Arsenault</h3>
+                    <h4>Assistant Professor, Yale University</h4>
+                    <p>Title TBD</p>
+                    <p><a style="color: #00996e; text-decoration: none;" target="_blank"
+                            href="https://www.arsenaultlab.com/">Arsenault Lab website</a></p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/gray.png" alt="Juliana Artier">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Juliana Artier</h3>
+                    <h4>Assistant Project Scientist, University of California, Berkeley</h4>
+                    <p>Title TBD</p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/demmig-adams-2.png" alt="Barbara Demmig-Adams">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Barbara Demmig-Adams (Keynote)</h3>
+                    <h4>Professor, University of Colorado-Boulder</h4>
+                    <p>"Non-Photochemical Energy Dissipation in Natural Settings"</p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/gisriel.jpg" alt="Chris Gisriel">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Chris Gisriel</h3>
+                    <h4>Assistant Professor, University of Wisconsin-Madison</h4>
+                    <p>"Molecular basis for the diversity of light-harvesting in <i>Acaryochloris marina</i>"</p>
+                    <p><a style="color: #00996e; text-decoration: none;" target="_blank"
+                            href="https://www.gisriellab.com/ ">Gisriel Lab website</a></p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/gray.png" alt="Paul King">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Paul King</h3>
+                    <h4>Group Manager, National Lab of the Rockies</h4>
+                    <p>"Electron transport in the HOX [NiFe-hydrogenase, HoxEFU sub-complex of Synechocystis sp PCC 6803"</p>
+                    <p><a style="color: #00996e; text-decoration: none;" target="_blank"
+                            href="https://research-hub.nlr.gov/en/persons/paul-king/">More about Paul</a></p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/gray.png" alt="Gabriela Schlau-Cohen">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Gabriela Schlau-Cohen</h3>
+                    <h4>Professor, Massachusetts Institute of Technology</h4>
+                    <p>Title TBD</p>
+                    <p><a style="color: #00996e; text-decoration: none;" target="_blank"
+                            href="https://www.schlaucohenlab.com/">Schlau-Cohen Lab website</a></p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/shoulders-2.png" alt="Matthew Shoulders">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Matthew Shoulders (Keynote)</h3>
+                    <h4>Professor, Massachusetts Institute of Technology</h4>
+                    <p>"Remarkably Efficient Natural Rubisco"</p>
+                    <p><a style="color: #00996e; text-decoration: none;" target="_blank"
+                            href="https://www.woodsonlab.arizona.edu">Shoulders Lab website</a></p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <img src="images/gray.png" alt="Ellen Yeh">
+                <div class="speaker-info">
+                    <h3 style="color: #007acc">Ellen Yeh</h3>
+                    <h4>Associate Professor, Stanford University</h4>
+                    <p>Title TBD</p>
+                    <p><a style="color: #00996e; text-decoration: none;" target="_blank"
+                            href="https://profiles.stanford.edu/ellen-yeh">More about Ellen</a></p>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <footer>
@@ -241,6 +348,7 @@
         const menu = document.querySelector('.nav ul');
         btn.addEventListener('click', () => menu.classList.toggle('show'));
     </script>
+
 </body>
 
 </html>

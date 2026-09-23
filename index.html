@@ -84,6 +84,7 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(90deg, #007acc, #00996e);
+            align-items: baseline;
         }
 
         .nav ul li {
@@ -238,49 +239,62 @@
         }
 
         .sponsor-logos {
-            display: flex;
-            justify-content: center;   
-            flex-wrap: wrap;           
-            gap: 5rem;                 
-            margin: 2rem auto 4rem auto;
-            max-width: 1000px;
-        }
+            max-width: 900px;
+            margin: 3rem auto 4rem auto;
 
-        .sponsor-logos img {
-            max-height: 100px;
-            max-width: 350px;   
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            display: block;
-            filter: grayscale(20%);
-            transition: filter 0.3s ease;
-        }
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
 
-        .logo-doe {
-            max-height: 200px !important;
-            max-width: 550px !important;
-        }
-        
-        .sponsor-logos div {
-            display: flex;
-            justify-content: center;
             align-items: center;
-            margin-bottom: 3rem;
-        }
-        
-        .sponsor-row-first {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 0.5rem !important;
+            justify-items: center;
         }
 
-        .sponsor-row-rest {
+        .sponsor-logo {
+            width: 100%;
+            height: 160px;
+
             display: flex;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 5rem;
+
+            padding: 1.5rem;
+            box-sizing: border-box;
+
+            text-decoration: none;
+        }
+
+        .sponsor-logo img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            max-width: 280px;
+            max-height: 110px;
+
+            transition: transform 0.3s ease;
+        }
+
+        .sponsor-logo img {
+            max-width: 280px;
+            max-height: 110px;
+        }
+
+        .sponsor-logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .sponsor-logo-featured {
+            grid-column: auto;
+            height: 300px;
+        }
+
+        .sponsor-logo-featured img {
+            max-width: 1000px;
+            max-height: 200px;
         }
 
         a {
@@ -384,12 +398,6 @@
         grid-template-columns: 1fr; 
         }
 
-        .logo-doe {
-        max-width: 90vw !important;
-        max-height: 120px !important;
-        width: auto;
-        height: auto; 
-        }
         }
 
     </style>
@@ -402,11 +410,12 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="program.html">Program</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="eco.html"><sup style="color: #fea81e;">New </sup>ECO Program</a></li>
+            <li><a href="gallery.html">2026 Photo Gallery</a></li>
             <li><a href="conduct.html">Code of Conduct</a></li>
         </ul>
     </nav>
@@ -419,7 +428,7 @@
     <section class="main-content">
         <div class="text-image-container">
             <div class="text-section">
-                <h2>Registration opens late September 2026!</h2>
+                <h2>Registration is now open!</h2>
 
                 <p>The Western Photosynthesis Conference (WPC) is pleased to announce its 36th annual meeting, bringing together researchers from diverse disciplines to advance our understanding of photosynthetic processes. As one of three regional photosynthesis conferences in the United States, the WPC provides a unique platform for scientists to share knowledge, collaborate, and foster professional growth, particularly for early-career scholars.</p>
                         
@@ -480,12 +489,56 @@
                 <p>Arizona State University</p>
             </div>
         </div>
+
+        <h2>Early-Career Organizers</h2>
+        <div class="organizers">
+            <div class="organizer">
+                <h3><a style="text-decoration: none;" style="color: #007acc;">Rebeca Acevedo Barboza</a></h3>
+                <p>PhD Student</p>
+                <p>University of Arizona</p>
+            </div>
+        
+            <div class="organizer">
+                <h3>Priyati Sharma</h3>
+                <p>PhD Student</p>
+                <p>University of California, Berkeley</p>
+            </div>
+        
+            <div class="organizer">
+                <h3>Victor Zhong</h3>
+                <p>PhD Student</p>
+                <p>University of California, Berkeley</p>
+            </div>
+        </div>
+
         <p style="text-align: center;">Please contact the organizers at <a style="color: #00996e;" href="mailto:westernphotosynthesis@gmail.com">westernphotosynthesis@gmail.com</a> with any questions or requests for additional information.</p>
 
-        <h2><a style="color: #24292e; text-decoration: none;" href="sponsors.html">Sponsors</a></h2>
-        <p style="text-align: center; color: #007acc;"><strong>Please consider sponsoring Western Photosynthesis Conference 2026!</strong>
-        </p>
+        <h2><a style="color: #24292e; text-decoration: none;" href="sponsors.html">Please consider sponsoring Western Photosynthesis Conference 2027!</a></h2>
         <p style="text-align: center;">Your financial contribution can help offset conference costs, support travel scholarships for young researchers, and forge connections between industry and academia. Contact the organizers at <a style="color: #00996e;" href="mailto:westernphotosynthesis@gmail.com">westernphotosynthesis@gmail.com</a> for more information.</p>
+
+        <div class="sponsor-logos">
+        
+            <a class="sponsor-logo sponsor-logo-featured" href="https://www.energy.gov/" target="_blank">
+                <img src="images/DOE.png" alt="United States Department of Energy">
+            </a>
+        
+            <a class="sponsor-logo sponsor-logo-featured" href="https://www.photosynthesis-research.org/" target="_blank">
+                <img src="images/ISPR.png" alt="International Society of Photosynthesis Research">
+            </a>
+        
+            <a class="sponsor-logo" href="https://www.phytoab.com/" target="_blank">
+                <img src="images/PHYTOAB.png" alt="PhytoAB">
+            </a>
+        
+            <a class="sponsor-logo" href="https://nph.onlinelibrary.wiley.com/journal/14698137" target="_blank">
+                <img src="images/New Phytologist.png" alt="New Phytologist">
+            </a>
+        
+            <a class="sponsor-logo" href="https://nph.onlinelibrary.wiley.com/journal/14698137" target="_blank">
+                <img src="images/spectrologix.png" alt="Spectrologix">
+            </a>
+        
+        </div>
 
     </section>
 

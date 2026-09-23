@@ -17,7 +17,6 @@
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* Base Styles */
         body {
             margin: 0;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,7 +25,6 @@
             color: #24292e;
         }
 
-        /* Navbar */
         .nav ul {
             list-style: none;
             padding: 1rem 0 0.5rem 0;
@@ -34,6 +32,7 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(90deg, #007acc, #00996e);
+            align-items: baseline;
         }
 
         .nav ul li {
@@ -126,6 +125,60 @@
             display: none;
         }
 
+        .sponsor-logos {
+            max-width: 900px;
+            margin: 3rem auto 4rem auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            align-items: center;
+            justify-items: center;
+        }
+
+        .sponsor-logo {
+            width: 100%;
+            height: 160px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 1.5rem;
+            box-sizing: border-box;
+
+            text-decoration: none;
+        }
+
+        .sponsor-logo img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            max-width: 280px;
+            max-height: 110px;
+
+            transition: transform 0.3s ease;
+        }
+
+        .sponsor-logo:hover img {
+        transform: scale(1.05);
+    }
+
+        .sponsor-logo-featured {
+            grid-column: auto;
+            height: 300px;
+        }
+
+        .sponsor-logo-featured img {
+            max-width: 1000px;
+            max-height: 200px;
+        }
+
         /* Mobile adjustments */
         @media (max-width: 768px) {
 
@@ -209,11 +262,12 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="program.html">Program</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="eco.html"><sup style="color: #fea81e;">New </sup>ECO Program</a></li>
+            <li><a href="gallery.html">2026 Photo Gallery</a></li>
             <li><a href="conduct.html">Code of Conduct</a></li>
         </ul>
     </nav>
@@ -229,11 +283,36 @@
         <p style="text-align: center; color: #007acc;"><strong>Please consider sponsoring Western Photosynthesis Conference
                 2026!</strong>
         </p>
+
+        <div class="sponsor-logos">
+        
+            <a class="sponsor-logo sponsor-logo-featured" href="https://www.energy.gov/" target="_blank">
+                <img src="images/DOE.png" alt="United States Department of Energy">
+            </a>
+        
+            <a class="sponsor-logo sponsor-logo-featured" href="https://www.photosynthesis-research.org/" target="_blank">
+                <img src="images/ISPR.png" alt="International Society of Photosynthesis Research">
+            </a>
+        
+            <a class="sponsor-logo" href="https://www.phytoab.com/" target="_blank">
+                <img src="images/PHYTOAB.png" alt="PhytoAB">
+            </a>
+        
+            <a class="sponsor-logo" href="https://nph.onlinelibrary.wiley.com/journal/14698137" target="_blank">
+                <img src="images/New Phytologist.png" alt="New Phytologist">
+            </a>
+        
+            <a class="sponsor-logo" href="https://nph.onlinelibrary.wiley.com/journal/14698137" target="_blank">
+                <img src="images/spectrologix.png" alt="Spectrologix">
+            </a>
+        
+        </div>
+
+
         <p style="text-align: center;">Your financial contribution can help offset conference costs, support travel scholarships
             for young researchers, and forge connections between industry and academia. Contact the organizers at <a
                 style="color: #00996e;" href="mailto:westernphotosynthesis@gmail.com">westernphotosynthesis@gmail.com</a> for
             more information.</p>
-        <!-- Add page-specific content here -->
     </main>
 
     <footer>

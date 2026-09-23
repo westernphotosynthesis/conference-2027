@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Western Photosynthesis Conference 2026</title>
+    <title>Western Photosynthesis Conference 2027</title>
 
     <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* Base Styles */
         body {
             margin: 0;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,7 +23,6 @@
             color: #24292e;
         }
 
-        /* Navbar */
         .nav ul {
             list-style: none;
             padding: 1rem 0 0.5rem 0;
@@ -34,6 +30,8 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(90deg, #007acc, #00996e);
+            align-items: baseline;
+
         }
 
         .nav ul li {
@@ -66,14 +64,12 @@
 
         footer .footer-logo img {
             max-width: 60px;
-            /* small size */
             height: auto;
             display: block;
             margin: 0 auto;
-            /* centers it */
+
         }
 
-        /* Header */
         .page-header {
             background: linear-gradient(90deg, #007acc, #00996e);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
@@ -97,7 +93,7 @@
             font-size: 1.25rem;
             margin: 0;
             color: rgba(255, 255, 255, 0.9);
-            /* 90% opacity */
+
         }
 
         .main-content {
@@ -122,20 +118,82 @@
             color: #35383D;
         }
 
+        .image-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            padding: 1rem 0;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 2000;
+        }
+
+        .lightbox.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 6px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .lightbox-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            font-size: 2.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+
+        .lightbox-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox-btn.prev {
+            left: 2%;
+        }
+
+        .lightbox-btn.next {
+            right: 2%;
+        }
+
         .hamburger {
             display: none;
         }
 
-        /* Mobile adjustments */
         @media (max-width: 768px) {
-
-            /* Shrink margins for body text */
             .main-content {
                 margin: 0.5rem 1rem;
                 padding: 0.5rem;
             }
 
-            /* Scale down header text */
             .page-header h1 {
                 font-size: 2rem;
             }
@@ -144,7 +202,6 @@
                 font-size: 1rem;
             }
 
-            /* Hamburger button (only on mobile) */
             .hamburger {
                 display: block;
                 cursor: pointer;
@@ -158,21 +215,17 @@
 
             .nav {
                 position: sticky;
-                /* makes it float at top */
                 top: 0;
                 z-index: 1000;
                 background: linear-gradient(90deg, #007acc, #00996e);
-                /* solid background when scrolling */
             }
 
-            /* Navbar collapses; expands when .show is added to .nav ul */
             .nav ul {
                 flex-direction: column;
                 align-items: stretch;
                 padding: 0;
                 margin: 0;
                 max-height: 0;
-                /* collapsed by default */
                 overflow: hidden;
                 transition: max-height 0.35s ease;
                 width: 100%;
@@ -180,7 +233,6 @@
 
             .nav ul.show {
                 max-height: 600px;
-                /* expanded */
             }
 
             .nav ul li {
@@ -197,36 +249,54 @@
                 padding: 0.75rem 1rem;
                 display: block;
             }
+
+            .image-section {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-btn prev">&#10094;</button>
+    <img src="" alt="">
+    <button class="lightbox-btn next">&#10095;</button>
+</div>
+
 <body>
 
-    <!-- Navbar -->
     <nav class="nav">
         <button class="hamburger" aria-label="Open menu">☰</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="program.html">Program</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="eco.html"><sup style="color: #fea81e;">New </sup>ECO Program</a></li>
+            <li><a href="gallery.html">2026 Photo Gallery</a></li>
             <li><a href="conduct.html">Code of Conduct</a></li>
         </ul>
     </nav>
 
-    <!-- Page Header -->
     <header class="page-header">
         <h1>Western Photosynthesis Conference 2027</h1>
         <p>January 7–10, 2027 • Los Gatos, CA</p>
     </header>
-    <!-- Main content will go here -->
     <main class="main-content">
-        <h2>Coming soon!</h2>
-        <!-- Add page-specific content here -->
+        <h2>2026 Photo Gallery</h2>
+        <div class="image-section">
+            <img src="images/WPC 2026.png" alt="WPC 2026 attendees standing outside.">
+            <img src="images/conf-01.png" alt="Outdoor view of the conference hall.">
+            <img src="images/conf-02.png" alt="Outdoor view of the conference hall.">
+            <img src="images/conf-03.png" alt="Attendees in the conference hall.">
+            <img src="images/conf-04.png" alt="Attendees interacting with sponsors during the coffee break.">
+            <img src="images/conf-05.png" alt="Attendees interacting with sponsors during the coffee break.">
+            <img src="images/conf-06.png" alt="Hiking trail at the venue.">
+            <img src="images/conf-07.png" alt="Making smores at the evening social mixer.">
+            <img src="images/conf-08.png" alt="The night sky in Los Gatos.">
+        </div>
     </main>
 
     <footer>
@@ -240,7 +310,65 @@
         const btn = document.querySelector('.hamburger');
         const menu = document.querySelector('.nav ul');
         btn.addEventListener('click', () => menu.classList.toggle('show'));
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const galleryImages = document.querySelectorAll('.image-section img');
+        const prevBtn = document.querySelector('.lightbox-btn.prev');
+        const nextBtn = document.querySelector('.lightbox-btn.next');
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            currentIndex = index;
+            lightboxImg.src = galleryImages[index].src;
+            lightboxImg.alt = galleryImages[index].alt;
+            lightbox.classList.add('show');
+        }
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                showImage(index);
+            });
+        });
+
+        function showNext() {
+            let nextIndex = (currentIndex + 1) % galleryImages.length;
+            showImage(nextIndex);
+        }
+
+        function showPrev() {
+            let prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            showImage(prevIndex);
+        }
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showNext();
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showPrev();
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('show');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('show')) return;
+
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('show');
+            } else if (e.key === 'ArrowRight') {
+                showNext();
+            } else if (e.key === 'ArrowLeft') {
+                showPrev();
+            }
+        });
     </script>
+
 </body>
 
 </html>

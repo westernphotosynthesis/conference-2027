@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Western Photosynthesis Conference 2027</title>
+
+    <link rel="icon" type="image/png" href="images/wpc-new-favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #24292e;
+        }
+
+        .page-header {
+            background: linear-gradient(90deg, #007acc, #00996e);
+            -webkit-mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 1) 80%,
+                    rgba(0, 0, 0, 0) 30%);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 1) 20%,
+                    rgba(0, 0, 0, 0) 100%);
+            mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+            padding: 2rem 1rem 6rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3.25rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            margin-top: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .main-content {
+            margin-top: 0.5rem;
+            margin-right: 5rem;
+            margin-bottom: 0.5rem;
+            margin-left: 5rem;
+            padding: 0.5rem;
+        }
+
+        .main-content h1,
+        .main-content h2 {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .main-content p {
+            margin: 0.5rem 0 1rem 0;
+            font-size: 1rem;
+            color: #35383D;
+        }
+
+        .main-content p.spaced {
+            margin-top: 2rem;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 1rem 0 0.5rem 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #007acc, #00996e);
+            align-items: baseline;
+        }
+
+        .nav ul li {
+            margin: 0 1rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .text-image-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 3.5rem;
+            margin: 1rem 0;
+        }
+
+        .text-section {
+            flex: 4;
+            margin: 0;
+        }
+
+        .image-section {
+            flex: 3;
+            text-align: center;
+            height: 450px;
+            /* i've been adjusting based on the length of the text */
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .organizers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 0 0;
+        }
+
+        .organizer {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .organizer h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            color: #007acc;
+        }
+
+        .organizer p {
+            margin: 0.25rem 0;
+        }
+
+        .important-dates {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 3rem auto;
+            max-width: 1000px;
+        }
+
+        .date-link {
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .date-box {
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            padding: 1.5rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .date-box h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: #007acc;
+        }
+
+        .date-box p {
+            margin: 0;
+            font-size: 1rem;
+            color: #35383D;
+        }
+
+        .date-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        @media (max-width: 1024px) {
+            .important-dates {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .important-dates {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer .footer-logo {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .footer-logo img {
+            max-width: 60px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .email {
+            color: #00996e;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        .date-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .date-link:hover .date-box {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5rem;
+            margin: 2rem auto 4rem auto;
+            max-width: 1000px;
+        }
+
+        .sponsor-logos img {
+            max-height: 100px;
+            max-width: 350px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.3s ease;
+        }
+
+        .logo-doe {
+            max-height: 200px !important;
+            max-width: 550px !important;
+        }
+
+        .sponsor-logos div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .sponsor-row-first {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .sponsor-row-rest {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5rem;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: underline;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 0.5rem 1rem;
+                padding: 0.5rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                background: none;
+                border: 0;
+                color: #ffffff;
+                font-size: 1.75rem;
+                line-height: 1;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: linear-gradient(90deg, #007acc, #00996e);
+            }
+
+            .nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+                margin: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+                width: 100%;
+            }
+
+            .nav ul.show {
+                max-height: 600px;
+            }
+
+            .nav ul li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .nav ul li:first-child {
+                border-top: 0;
+            }
+
+            .nav ul li a {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+                display: block;
+            }
+
+            .text-image-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .image-section {
+                width: 100%;
+                height: auto;
+            }
+
+            .image-section img {
+                height: auto;
+                max-height: 300px;
+            }
+
+            .important-dates {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+                grid-template-columns: 1fr;
+
+            }
+
+            .date-box {
+                flex: 1 1 auto;
+                width: 90%;
+            }
+
+            .organizers {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .sponsor-logos {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-doe {
+                max-width: 90vw !important;
+                max-height: 120px !important;
+                width: auto;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="nav">
+        <button class="hamburger" aria-label="Open menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="eco.html"><sup style="color: #fea81e;">New </sup>ECO Program</a></li>
+            <li><a href="gallery.html">2026 Photo Gallery</a></li>
+            <li><a href="conduct.html">Code of Conduct</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Western Photosynthesis Conference 2027</h1>
+        <p>January 7–10, 2027 • Los Gatos, CA</p>
+    </header>
+
+    <section class="main-content">
+        <div class="text-image-container">
+            <div class="text-section">
+                <h2>Registration</h2>
+                <p style="text-align: center;">Please click the correct option below to proceed to the registration form: </p>
+            </div>
+        </div>
+
+        <div class="important-dates">
+            <a href="https://forms.gle/B3DXsL6uQor57TFK6" class="date-link">
+                <div class="date-box">
+                    <h3>Undergraduate Student</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+            <a href="https://forms.gle/KZkCpFwhTSso47Gz9" class="date-link">
+                <div class="date-box">
+                    <h3>Research Technician</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+            <a href="https://forms.gle/graHC3GzMJCgnfXdA" class="date-link">
+                <div class="date-box">
+                    <h3>Graduate Student</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+            <a href="https://forms.gle/zCBD38z4k8aqfM1x6" class="date-link">
+                <div class="date-box">
+                    <h3>Postdoc</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+            <a href="https://forms.gle/yBHzNrbAqoZ72vey9" class="date-link">
+                <div class="date-box">
+                    <h3>PI</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+            <a href="https://forms.gle/xsYezeKWKPZEQ5tVA" class="date-link">
+                <div class="date-box">
+                    <h3>Industry Professional</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+            <a href="https://forms.gle/WCsVGNeMns6rgtv89" class="date-link">
+                <div class="date-box">
+                    <h3>Guest</h3>
+                    <p>Register here</p>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/wpc-new-favicon.png" alt="WPC Logo">
+        </div>
+        <p>&copy; Western Photosynthesis Conference 2027</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.hamburger');
+        const menu = document.querySelector('.nav ul');
+        btn.addEventListener('click', () => menu.classList.toggle('show'));
+    </script>
+</body>
+
+</html>
